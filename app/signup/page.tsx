@@ -6,7 +6,7 @@ export default function Signup() {
   return (
     <main className="p-9 flex justify-center">
       <CardOne>
-        <div className="w-140 h-100 flex flex-col items-center justify-evenly ">
+        <form className="w-140 h-100 flex flex-col items-center justify-evenly ">
           <h1 className="text-3xl font-bold title">Sign-Up</h1>
           <input type="text" placeholder="John Doe" />
           <input type="email" placeholder="johndoe143@gmail.com" />
@@ -14,7 +14,7 @@ export default function Signup() {
           <Link href="/notepad">
             <Button>Sign Up</Button>
           </Link>
-        </div>
+        </form>
       </CardOne>
     </main>
   );
