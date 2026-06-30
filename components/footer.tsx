@@ -1,4 +1,4 @@
-import FriendlyNoteLogo from "@/components/gen_components/logo";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -6,26 +6,26 @@ export default function Footer() {
       <div className="flex justify-evenly w-full  text-base">
         <ul className="footanari">
           <li>
-            <a href="#">About Us</a>
+            <Link href="#">About Us</Link>
           </li>
           <li>
-            <a href="#">Contact Us</a>
-          </li>
-        </ul>
-        <ul className="footanari">
-          <li>
-            <a href="#">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#">Terms & Conditions</a>
+            <Link href="#">Contact Us</Link>
           </li>
         </ul>
         <ul className="footanari">
           <li>
-            <a href="#">Job Opportunities</a>
+            <Link href="/privacy_policy">Privacy Policy</Link>
           </li>
           <li>
-            <a href="#">Blogs</a>
+            <Link href="#">Terms & Conditions</Link>
+          </li>
+        </ul>
+        <ul className="footanari">
+          <li>
+            <Link href="#">Job Opportunities</Link>
+          </li>
+          <li>
+            <Link href="#">Blogs</Link>
           </li>
         </ul>
       </div>

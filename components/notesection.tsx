@@ -1,30 +1,30 @@
 "use client";
 import { Button } from "./ui/button";
 
-type NoteEditorProps = {
-  title: string;
-  setTitle: (title: string) => void;
-  onSave: () => void;
+type AddNoteButtonProps = {
+  activeNote: boolean;
+  setActiveNote: (value: boolean) => void;
 };
 
 export default function NoteSection({
-  title,
-  setTitle,
-  onSave,
-}: NoteEditorProps) {
+  activeNote,
+  setActiveNote,
+}: AddNoteButtonProps) {
+  function toggleNote() {
+    setActiveNote(!activeNote);
+  }
+
   return (
     <>
       <textarea
-        className="w-full h-auto p-2 border-2"
-        placeholder="This is a note for my Lovely Alexandra..."
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        className="w-full h-auto p-2 border-2 text-center"
+        placeholder="Title"
       ></textarea>
       <textarea
         className="w-full h-auto p-2 border-2"
         placeholder="This is a note for my Lovely Alexandra..."
       ></textarea>
-      <Button onClick={onSave}>Save</Button>
+      <Button onClick={toggleNote}>Save</Button>
     </>
   );
 }
